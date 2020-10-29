@@ -21,7 +21,15 @@ def getCallStack():
     localVars = []
     frame = inspect.currentframe().f_back
     while frame is not None:
-        localVars.append(frame.f_locals)
+        currentLocalVars = dict(frame.f_locals)
+        if 'showcallstack' in currentLocalVars:
+            del currentLocalVars['showcallstack']
+        if 'showCallStack' in currentLocalVars:
+            del currentLocalVars['showCallStack']
+        if 'getCallStack' in frame.f_locals:
+            del currentLocalVars['getCallStack']
+
+        localVars.append(currentLocalVars)
         frame = frame.f_back
 
     # Get rid of frame/global variables in the global scope.

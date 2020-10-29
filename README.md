@@ -1,7 +1,7 @@
 # showcallstack
 Shows a simplified view of the call stack.
 
-This module is similar to Python's built-in `traceback` and `inspect` modules, but is easier to use and displays more simple output. This module is useful for demonstrating what the call stack looks like during recursive function calls.
+This module is similar to Python's built-in `traceback` and `inspect` modules, but is easier to use and displays more simple output. This module is useful for demonstrating what the call stack looks like during recursive function calls. Simply add a `from showcallstack import showCallStack` line and then call `showCallStack()` from wherever you wish to see the state of the call stack and the local variables in each call frame.
 
 Example Usage
 =============
