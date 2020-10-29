@@ -1,20 +1,18 @@
-"""ShowCallStack
+"""showcallstack
 By Al Sweigart al@inventwithpython.com
 
 Shows a simplified view of the call stack."""
 
-__version__ = '0.1.0'
+__version__ = '0.2.0'
 
 import traceback, inspect, pprint
 
 
-
-def showCallStack():
-    print('\n'.join(getCallStack()))
-
+def showcallstack():
+    print('\n'.join(getcallstack()))
 
 
-def getCallStack():
+def getcallstack():
     outputStrings = []
 
     tracebackInfo = list(reversed(traceback.extract_stack()[:-2]))
@@ -24,10 +22,8 @@ def getCallStack():
         currentLocalVars = dict(frame.f_locals)
         if 'showcallstack' in currentLocalVars:
             del currentLocalVars['showcallstack']
-        if 'showCallStack' in currentLocalVars:
-            del currentLocalVars['showCallStack']
-        if 'getCallStack' in frame.f_locals:
-            del currentLocalVars['getCallStack']
+        if 'getcallstack' in frame.f_locals:
+            del currentLocalVars['getcallstack']
 
         localVars.append(currentLocalVars)
         frame = frame.f_back
