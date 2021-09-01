@@ -66,3 +66,8 @@ This recursive factorial program...
     Function/method: factorial(), Local variables: {'num': 1}
 
 You can also call the `showcallstack.getcallstack()` function to get this output as a list of strings.
+
+Support
+-------
+
+If you find this project helpful and would like to support its development, [consider donating to its creator on Patreon](https://www.patreon.com/AlSweigart).
