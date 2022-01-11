@@ -3,7 +3,7 @@ By Al Sweigart al@inventwithpython.com
 
 Shows a simplified view of the call stack."""
 
-__version__ = '0.2.1'
+__version__ = '0.2.2'
 
 import traceback, inspect, pprint
 
