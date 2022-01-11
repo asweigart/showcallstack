@@ -28,9 +28,11 @@ This program...
 ...outputs this:
 
     The call stack is 3 call(s) deep:
+    (Here is the "bottom" of the call stack.)
     Function/method: a(), Local variables: {'varA': 42}
     Function/method: b(), Local variables: {'varB': 86}
     Function/method: c(), Local variables: {'varC': 99}
+    (Here is the "top" of the call stack.)
 
 This recursive factorial program...
 
@@ -48,22 +50,30 @@ This recursive factorial program...
 ...outputs this:
 
     The call stack is 1 call(s) deep:
+    (Here is the "bottom" of the call stack.)
     Function/method: factorial(), Local variables: {'num': 4}
+    (Here is the "top" of the call stack.)
 
     The call stack is 2 call(s) deep:
+    (Here is the "bottom" of the call stack.)
     Function/method: factorial(), Local variables: {'num': 4}
     Function/method: factorial(), Local variables: {'num': 3}
+    (Here is the "top" of the call stack.)
 
     The call stack is 3 call(s) deep:
+    (Here is the "bottom" of the call stack.)
     Function/method: factorial(), Local variables: {'num': 4}
     Function/method: factorial(), Local variables: {'num': 3}
     Function/method: factorial(), Local variables: {'num': 2}
+    (Here is the "top" of the call stack.)
 
     The call stack is 4 call(s) deep:
+    (Here is the "bottom" of the call stack.)
     Function/method: factorial(), Local variables: {'num': 4}
     Function/method: factorial(), Local variables: {'num': 3}
     Function/method: factorial(), Local variables: {'num': 2}
     Function/method: factorial(), Local variables: {'num': 1}
+    (Here is the "top" of the call stack.)
 
 You can also call the `showcallstack.getcallstack()` function to get this output as a list of strings.
 

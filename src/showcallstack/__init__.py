@@ -39,8 +39,8 @@ def getcallstack():
     outputStrings.append('The call stack is %s call(s) deep:' % (len(tracebackInfo)))
     if len(tracebackInfo) == 0:
         # Show a special message explaining that we were called from the global scope.
-        outputString.append('  showcallstack() was called in the global scope and not in a function call.')
-        ouptutString.append('')
+        outputStrings.append('  showcallstack() was called in the global scope and not in a function call.')
+        outputStrings.append('')
         return outputStrings
 
     outputStrings.append('(Here is the "bottom" of the call stack.)')
