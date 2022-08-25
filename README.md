@@ -23,16 +23,23 @@ This program...
         varC = 99
         showcallstack()
 
+    spam = 'SPAM!
     a()
 
 ...outputs this:
 
     The call stack is 3 call(s) deep:
     (Here is the "bottom" of the call stack.)
-    Function/method: a(), Local variables: {'varA': 42}
-    Function/method: b(), Local variables: {'varB': 86}
-    Function/method: c(), Local variables: {'varC': 99}
+    Local variables of call to a():
+      varA (type: int) == 42
+    Local variables of call to b():
+      varB (type: int) == 86
+    Local variables of call to c():
+      varC (type: int) == 99
     (Here is the "top" of the call stack.)
+
+    Global variables:
+      spam (type: str) == 'SPAM!'
 
 This recursive factorial program...
 
@@ -51,29 +58,51 @@ This recursive factorial program...
 
     The call stack is 1 call(s) deep:
     (Here is the "bottom" of the call stack.)
-    Function/method: factorial(), Local variables: {'num': 4}
+    Local variables of call to factorial():
+      num (type: int) == 4
     (Here is the "top" of the call stack.)
+
+    Global variables:
+      No global variables.
 
     The call stack is 2 call(s) deep:
     (Here is the "bottom" of the call stack.)
-    Function/method: factorial(), Local variables: {'num': 4}
-    Function/method: factorial(), Local variables: {'num': 3}
+    Local variables of call to factorial():
+      num (type: int) == 4
+    Local variables of call to factorial():
+      num (type: int) == 3
     (Here is the "top" of the call stack.)
+
+    Global variables:
+      No global variables.
 
     The call stack is 3 call(s) deep:
     (Here is the "bottom" of the call stack.)
-    Function/method: factorial(), Local variables: {'num': 4}
-    Function/method: factorial(), Local variables: {'num': 3}
-    Function/method: factorial(), Local variables: {'num': 2}
+    Local variables of call to factorial():
+      num (type: int) == 4
+    Local variables of call to factorial():
+      num (type: int) == 3
+    Local variables of call to factorial():
+      num (type: int) == 2
     (Here is the "top" of the call stack.)
+
+    Global variables:
+      No global variables.
 
     The call stack is 4 call(s) deep:
     (Here is the "bottom" of the call stack.)
-    Function/method: factorial(), Local variables: {'num': 4}
-    Function/method: factorial(), Local variables: {'num': 3}
-    Function/method: factorial(), Local variables: {'num': 2}
-    Function/method: factorial(), Local variables: {'num': 1}
+    Local variables of call to factorial():
+      num (type: int) == 4
+    Local variables of call to factorial():
+      num (type: int) == 3
+    Local variables of call to factorial():
+      num (type: int) == 2
+    Local variables of call to factorial():
+      num (type: int) == 1
     (Here is the "top" of the call stack.)
+
+    Global variables:
+      No global variables.
 
 You can also call the `showcallstack.getcallstack()` function to get this output as a list of strings.
 
